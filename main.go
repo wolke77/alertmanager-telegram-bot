@@ -32,11 +32,12 @@ type Alerts struct {
 	CommonAnnotations map[string]interface{} `json:"commonAnnotations"`
 	CommonLabels      map[string]interface{} `json:"commonLabels"`
 	ExternalURL       string                 `json:"externalURL"`
-	GroupKey          int                    `json:"groupKey"`
+	GroupKey          string                 `json:"groupKey"`
 	GroupLabels       map[string]interface{} `json:"groupLabels"`
 	Receiver          string                 `json:"receiver"`
 	Status            string                 `json:"status"`
-	Version           int                    `json:"version"`
+	TruncatedAlerts   uint64                 `json:"truncatedAlerts"`
+	Version           string                 `json:"version"`
 }
 
 type Alert struct {
