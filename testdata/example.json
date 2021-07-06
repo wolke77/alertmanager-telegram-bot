@@ -1,0 +1,71 @@
+{
+  "alerts": [
+    {
+      "annotations": {
+        "description": "Diskspace is predicted to get below 5GiB on host server2 for mountpoint /boot, prediction based on the last 36h",
+        "summary": "36h Disk space prediction low on server2"
+      },
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "https://grafana.example.com/explore?orgId=1\u0026left=[\"now-1h\",\"now\",\"prom:metrics.example.com\",{\"expr\":\"predict_linear%28%5Cn%20%20netdata_disk_space_GiB_average%7Bdimension=%5C%22avail%5C%22%2C%20family%21~%5C%22%2Fboot%2Fefi%7C%2Fdev%2Fshm%7C%2Frun%7C%2Fdev%7C%2Frun%2F.%2A%5C%22%7D%5Cn%20%20%5B36h%5D%2C%203600%20%2A%2036%5Cn%20%20%29%5Cn%3C%205%5Cn\"}]",
+      "labels": {
+        "alertgroup": "filesystem",
+        "alertname": "DiskSpacePrediction36h",
+        "alertsource": "metrics.example.com",
+        "chart": "disk_space._boot",
+        "dimension": "avail",
+        "family": "/boot",
+        "host": "server2",
+        "instance": "127.0.0.1:19999",
+        "job": "netdata",
+        "scraper_instance": "server2.example.com",
+        "severity": "warning"
+      },
+      "startsAt": "2021-06-25T16:57:15Z",
+      "status": "firing"
+    },
+    {
+      "annotations": {
+        "description": "Diskspace is predicted to get below 5GiB on host server2 for mountpoint /boot, prediction based on the last 36h",
+        "summary": "72h Disk space prediction low  on server2"
+      },
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "https://grafana.example.com/explore?orgId=1\u0026left=[\"now-1h\",\"now\",\"prom:metrics.example.com\",{\"expr\":\"predict_linear%28%5Cn%20%20netdata_disk_space_GiB_average%7Bdimension=%5C%22avail%5C%22%2C%20family%21~%5C%22%2Fboot%2Fefi%7C%2Fdev%2Fshm%7C%2Frun%7C%2Fdev%7C%2Frun%2F.%2A%5C%22%7D%5Cn%20%20%5B36h%5D%2C%203600%20%2A%2072%5Cn%20%20%29%5Cn%3C%205%5Cn\"}]",
+      "labels": {
+        "alertgroup": "filesystem",
+        "alertname": "DiskSpacePrediction72h",
+        "alertsource": "metrics.example.com",
+        "chart": "disk_space._boot",
+        "dimension": "avail",
+        "family": "/boot",
+        "host": "server2",
+        "instance": "127.0.0.1:19999",
+        "job": "netdata",
+        "scraper_instance": "server2.example.com",
+        "severity": "warning"
+      },
+      "startsAt": "2021-06-25T16:57:15Z",
+      "status": "firing"
+    }
+  ],
+  "commonAnnotations": {
+    "description": "Diskspace is predicted to get below 5GiB on host server2 for mountpoint /boot, prediction based on the last 36h"
+  },
+  "commonLabels": {
+    "alertgroup": "filesystem",
+    "alertsource": "metrics.example.com",
+    "chart": "disk_space._boot",
+    "dimension": "avail",
+    "family": "/boot",
+    "host": "server2",
+    "instance": "127.0.0.1:19999",
+    "job": "netdata",
+    "scraper_instance": "server2.example.com",
+    "severity": "warning"
+  },
+  "externalURL": "https://alertmanager.example.com",
+  "groupKey": 0,
+  "groupLabels": {},
+  "receiver": "telegram-alerts",
+  "status": "firing",
+  "version": 0
+}

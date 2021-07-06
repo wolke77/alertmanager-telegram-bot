@@ -1,0 +1,6 @@
+telegram_token: "FILLME"
+template_path: "/etc/telegrambot/template.html.tmpl"
+time_zone: "Europe/Zurich"
+split_token: "|"
+time_outdata: "02.01.2006 15:04:05"
+split_msg_byte: 10000
